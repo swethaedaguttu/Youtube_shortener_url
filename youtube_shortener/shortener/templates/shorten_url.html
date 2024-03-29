@@ -1,0 +1,39 @@
+<!-- templates/shortener/shorten_url.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortened URL</title>
+    <style>
+        body{
+            background-color: red;
+
+        }
+        div{
+        margin: auto;
+        border: 1px solid black;
+        width: 500px;
+        height: 215px;
+        background-color: white;
+        text-align: center;
+        color: black;
+        border-radius: 20px;
+     }
+     span{
+        margin-left: 40%;
+        font-size: 150px;
+     }
+     a{
+        font-size: 50px;
+     }
+    </style>
+</head>
+<body>
+    <span>&#128071</span>
+    <div>
+        <h1>Shortened URL:</h1>
+        <p>Shortened URL for YouTube video: <br><br><br> <a href="{{ shortened_url.original_url }}">{{ shortened_url.short_url }}</a></p>
+    </div>
+</body>
+</html>

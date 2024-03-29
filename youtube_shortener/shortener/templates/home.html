@@ -1,0 +1,62 @@
+<!-- templates/shortener/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+     body{
+        
+     background-color: rgb(21, 21, 21);   
+       
+     }
+     .h1{
+        color: white;
+        text-align: center;
+        
+        font-size: 90px;
+     }
+     div{
+        margin: auto;
+        border: 1px solid black;
+        width: 500px;
+        height: 215px;
+        background-color: red;
+        text-align: center;
+        
+        color: white;
+        border-radius: 20px;
+     }
+     form{
+        border: 1px solid black;
+        font-size: 50px;
+        border-top: none;
+        
+     }
+     input{
+        width: 480px;
+        height: 50px;
+     }
+     button{
+        width: 280px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        font-size: 20px;
+        border-radius: 20px;
+     }
+</style>
+</head>
+<body>
+    <h1 class="h1">WELCOME</h1>
+    <div>
+    <h1>URL Shortener</h1>
+    <form action="{% url 'shorten_url' %}" method="post">
+        {% csrf_token %}
+        <input type="url" name="original_url" placeholder="Enter YouTube URL" required><br>
+        <button type="submit">Shorten</button>
+    </form>
+</div>
+</body>
+</html>
